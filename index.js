@@ -6,6 +6,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 var db = require('./db');
 
+app.use('/users', require('./routes/users'));
+
 app.listen(app.get('port'), function() {
   console.log('Node app started on port: ', app.get('port'));
 });
